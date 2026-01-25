@@ -1,0 +1,5 @@
+Constraint	n1	n2	overlap	hyp_pval	perm_pval
+High constraint	1050	1034	894	0	0
+Moderate-high constraint	5270	5466	4979	0	0
+Moderate-low constraint	6754	6562	6380	0	0
+Low constraint	265	277	234	0	0
