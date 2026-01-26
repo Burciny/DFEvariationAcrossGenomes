@@ -1,0 +1,13 @@
+Bin	Count	Percentage	Species
+High constraint	1050	0.078716545468176	Dmel
+Moderate-high constraint	5270	0.395082090111703	Dmel
+Moderate-low constraint	6754	0.506334807706725	Dmel
+Low constraint	265	0.0198665567133968	Dmel
+High constraint	1107	0.189749742886527	Yeast
+Moderate-high constraint	76	0.0130270826191292	Yeast
+Moderate-low constraint	583	0.0999314364072677	Yeast
+Low constraint	4068	0.697291738087076	Yeast
+High constraint	4625	0.2309036445332	Mouse
+Moderate-high constraint	8430	0.420868696954568	Mouse
+Moderate-low constraint	6054	0.302246630054918	Mouse
+Low constraint	921	0.045981028457314	Mouse
