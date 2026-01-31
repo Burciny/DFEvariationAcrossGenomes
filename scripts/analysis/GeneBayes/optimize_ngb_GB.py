@@ -70,15 +70,15 @@ def run_model(params):
 
 ### Narrow the ranges depending on the previous best grid search run,
 def objective(trial):
-    """Optuna objective function for Bayesian optimization."""
+    """Optuna objective function for Bayesian optimization. Suggestions change depending on species parameters"""
     params = {
-        "lr": trial.suggest_float("lr", 0.01, 0.1, log=True), # 0.01
-        "max_depth": trial.suggest_int("max_depth", 2, 4), # 3
-        "min_child_weight": trial.suggest_float("min_child_weight", 0.8, 5, log=True), # 4 or 1
-        "subsample": trial.suggest_float("subsample", 0.6, 0.9), # 0.8
-        "n_trees_per_iteration": trial.suggest_int("n_trees_per_iteration", 1, 4), # 1
-        "reg_alpha": trial.suggest_float("reg_alpha",  1e-8, 5, log=True), # 0 or 1
-        "reg_lambda": trial.suggest_float("reg_lambda", 1e-8, 5, log=True), # 1
+        "lr": trial.suggest_float("lr", 0.01, 0.1, log=True), 
+        "max_depth": trial.suggest_int("max_depth", 2, 4),
+        "min_child_weight": trial.suggest_float("min_child_weight", 0.8, 5, log=True), 
+        "subsample": trial.suggest_float("subsample", 0.6, 0.9), 
+        "n_trees_per_iteration": trial.suggest_int("n_trees_per_iteration", 1, 4), 
+        "reg_alpha": trial.suggest_float("reg_alpha",  1e-8, 5, log=True), 
+        "reg_lambda": trial.suggest_float("reg_lambda", 1e-8, 5, log=True), 
     }
 
     return run_model(params)
@@ -86,7 +86,7 @@ def objective(trial):
 
 if __name__ == "__main__":
     study = optuna.create_study(direction="minimize")
-
+"""Start parameters change depending on grid search"""
     enqueue_params = {
         "lr": 0.01,
         "max_depth": 3,
