@@ -114,11 +114,6 @@ def bootstrap_pi(df, M, ngenomes, n_bootstrap=1000, ci=95,folded=False):
 
     return mean_pi, lower, upper
 
-##############  Bootstrap: sample genes ??
-
-
-
-
 ##############  Bootstrap: same sample size (sample sites)
 def bootstrap_pnps(df_neut,df_sel, M, ngenomes, n_bootstrap=1000, ci=95,folded=False):
     """
