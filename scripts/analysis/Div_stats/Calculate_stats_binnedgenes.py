@@ -10,10 +10,10 @@ import wrangle
 count_file=sys.argv[1] # Population genetics (allele count) data
 
 ### Gene names in each bin
-bin1=sys.argv[2]
-bin2=sys.argv[3]
-bin3=sys.argv[4]
-bin4=sys.argv[5]
+bin1=sys.argv[2] # High constraint HC
+bin2=sys.argv[3] # Moderate high constraint MHC
+bin3=sys.argv[4] # Moderate low constraint MLC
+bin4=sys.argv[5] # Low constraint LC
 
 out_file1=sys.argv[6] ## Pi values
 out_file2=sys.argv[7] ## P0/P4 values
