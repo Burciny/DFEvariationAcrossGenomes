@@ -92,7 +92,7 @@ codon_aa_dict = {
     "GAT": "Asp", "GAC": "Asp",
     "GAA": "Glu", "GAG": "Glu",
     "TGT": "Cys", "TGC": "Cys",
-    "ATT": "Ile", "ATC": "Ile", "ATA": "Ile", # Can be classified as twofold also?
+    "ATT": "Ile", "ATC": "Ile", "ATA": "Ile", 
     "ATG": "Met",
     "TGG": "Trp",
     "TAA": "Stop", "TGA": "Stop", "TAG": "Stop"
