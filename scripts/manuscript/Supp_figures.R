@@ -446,6 +446,9 @@ Bestfits_all_discretizedDFE$Species<- factor(Bestfits_all_discretizedDFE$Species
 Bestfits_all_discretizedDFE$inference <- factor(Bestfits_all_discretizedDFE$inference,
                                                 levels= c("full","High constraint", "Moderate-high constraint", "Moderate-low constraint", "Low constraint"))
 
+Bestfits_all_discretizedDFE$Bin<- factor(Bestfits_all_discretizedDFE$Bin,
+                                         levels= c("(inf,-100)","[-100,-10)", "[-10,-1)", "[-1,0)", "[0,1)", "[1,inf)"))
+
 ggplot(Bestfits_all_discretizedDFE,aes(x=Species,y=Value,fill=Bin))+geom_bar(stat="identity",position="dodge")+
   theme(panel.background = element_rect(fill = "white", colour="black"),
         panel.grid.minor = element_line(colour = "grey90"),
