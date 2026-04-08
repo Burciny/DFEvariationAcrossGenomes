@@ -14,6 +14,6 @@ Data used for the final analysis and visualization in the scripts under scripts/
 
 scripts/analysis/
 
-Functions for analyses, including creation of intermediate data and calculation of the statistics presented in the paper.
+Main scripts used for analyses, including creation of intermediate data and calculation of the statistics presented in the paper.
 
 
