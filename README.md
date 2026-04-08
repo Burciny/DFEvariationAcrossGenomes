@@ -17,4 +17,3 @@ scripts/analysis/
 Functions for analyses, including creation of intermediate data and calculation of the statistics presented in the paper.
 
 
-Final filtered population genetics data for mouse, fruit fly, and yeast are in XXXXX
