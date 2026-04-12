@@ -1,6 +1,6 @@
 This repository contains the data and scripts necessary to replicate the final results presented in the paper:
 
-XXXXXXX
+Yıldırım, B. & James, J. E. Gene-level complexity explains genome-wide variation in the distribution of fitness effects. 2026.04.08.717178 Preprint at https://doi.org/10.64898/2026.04.08.717178 (2026).
 
 The files in the repository are arranged as follows:
 
