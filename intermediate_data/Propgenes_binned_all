@@ -1,0 +1,13 @@
+Bin	Count	Percentage	Species
+High constraint	1050	0.078716545468176	Fruit fly
+Moderate-high constraint	5270	0.395082090111703	Fruit fly
+Moderate-low constraint	6754	0.506334807706725	Fruit fly
+Low constraint	265	0.0198665567133968	Fruit fly
+High constraint	994	0.170380527939664	Yeast
+Moderate-high constraint	416	0.0713061364415495	Yeast
+Moderate-low constraint	850	0.145697634556051	Yeast
+Low constraint	3574	0.612615701062736	Yeast
+High constraint	4625	0.2309036445332	Mouse
+Moderate-high constraint	8430	0.420868696954568	Mouse
+Moderate-low constraint	6054	0.302246630054918	Mouse
+Low constraint	921	0.045981028457314	Mouse
