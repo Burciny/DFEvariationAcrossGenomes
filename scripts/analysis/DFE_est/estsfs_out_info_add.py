@@ -2,7 +2,6 @@ import pandas as pd
 import sys
 
 #### One Outgroup #####
-# Path to Est-sfs output
 
 est_sfs_file = sys.argv[1] # estsfs pvalues out
 count_file = sys.argv[2] #  Population genetics (allele count) data
