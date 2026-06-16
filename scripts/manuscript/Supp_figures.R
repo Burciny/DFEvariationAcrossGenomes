@@ -961,37 +961,4 @@ ggplot(Bestfits_all_discretizedDFE,aes(x=Species,y=Value,fill=Bin))+geom_bar(sta
         strip.text.y = element_text(size = 10),strip.text.x = element_text(size = 10))+ylab("fraction")+xlab("S")+
   scale_fill_brewer(palette = "RdGy")+facet_grid(.~inference)
 
-################ ################ ################ ################ ################ 
-################ FIGURE S15 ################ ################ ################ ################ 
-
-
-Bin_10_polyequal_omegaalpha_bestfits_parameters <- read_delim("../../intermediate_data/Bin_10_polyequal_omegaalpha_bestfits_parameters", 
-                                                   delim = "\t", escape_double = FALSE, 
-                                                   trim_ws = TRUE)
-
-Bin_10_polyequal_omegaalpha_bestfits_parameters$Species<- factor(Bin_10_polyequal_omegaalpha_bestfits_parameters$Species,levels = c("Mouse","Fruit fly","Yeast"))
-Bin_10_polyequal_omegaalpha_bestfits_parameters$bin <- factor(Bin_10_polyequal_omegaalpha_bestfits_parameters$bin,levels = 1:15)
-
-Bin_15_polyequal_omegaalpha_bestfits_parameters <- read_delim("../../intermediate_data/Bin_15_polyequal_omegaalpha_bestfits_parameters", 
-                                                   delim = "\t", escape_double = FALSE, 
-                                                   trim_ws = TRUE)
-
-
-Bin_15_polyequal_omegaalpha_bestfits_parameters$Species<- factor(Bin_15_polyequal_omegaalpha_bestfits_parameters$Species,levels = c("Mouse","Fruit fly","Yeast"))
-Bin_15_polyequal_omegaalpha_bestfits_parameters$bin <- factor(Bin_15_polyequal_omegaalpha_bestfits_parameters$bin,levels = 1:15)
-
-
-#### Upper Panel
-
-ggplot(Bin_10_polyequal_omegaalpha_bestfits_parameters, aes(x = bin, y = omega_a)) + geom_point() + 
-  geom_boxplot(aes(group=bin), alpha=0.2) + facet_wrap(.~Species, scales="free_y") + 
-  theme_classic()+ylab(expression(omega[a]))+xlab("")+ geom_errorbar(aes(ymax=omega_a_hi, ymin=omega_a_lo))
-
-
-##### Lower panel
-
-ggplot(Bin_15_polyequal_omegaalpha_bestfits_parameters, aes(x = bin, y = omega_a)) + geom_point() + 
-  geom_boxplot(aes(group=bin), alpha=0.2) + facet_wrap(.~Species, scales="free_y") + 
-  theme_classic()+ylab(expression(omega[a]))+xlab("")+ geom_errorbar(aes(ymax=omega_a_hi, ymin=omega_a_lo))
-
 
