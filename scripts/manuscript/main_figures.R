@@ -136,16 +136,18 @@ ggplot(Bestfits_all_paramsMLE[Bestfits_all_paramsMLE$Parameter=="alpha_thr",],ae
 
 dev.off()
 
-### 3B
+################ ################ ################ ################ ################ 
+################ FIGURE 4 ################ ################ ################ ################ 
 
 Bestfits_omegaalpha <- read_delim("../../intermediate_data/Bestfits_omegaalpha", 
-                                                              delim = "\t", escape_double = FALSE, 
-                                                              trim_ws = TRUE)
+                                  delim = "\t", escape_double = FALSE, 
+                                  trim_ws = TRUE)
 
 Bestfits_omegaalpha$Species<- factor(Bestfits_omegaalpha$Species,levels = c("Mouse","Fruit fly","Yeast"))
 Bestfits_omegaalpha$bin <- factor(Bestfits_omegaalpha$bin,
-                                      levels= c("full","High constraint", "Moderate-high constraint", "Moderate-low constraint", "Low constraint"))
+                                  levels= c("full","High constraint", "Moderate-high constraint", "Moderate-low constraint", "Low constraint"))
 
+### 4A
 ggplot(Bestfits_omegaalpha,aes(x=bin,y=omega_a,fill=bin))+geom_bar(position = "dodge", stat = "identity")+
   theme(panel.background = element_rect(fill = "white", colour="black"),
         panel.grid.minor = element_line(colour = "grey90"),
@@ -154,9 +156,36 @@ ggplot(Bestfits_omegaalpha,aes(x=bin,y=omega_a,fill=bin))+geom_bar(position = "d
   scale_fill_viridis(discrete = TRUE)+  facet_wrap(~ Species, nrow = 1, scales="free_y") +
   ylab(expression(omega[a]))+geom_errorbar(aes(ymax=omega_a_hi, ymin=omega_a_lo))
 
+### 4B
+
+Bin_10_polyequal_omegaalpha_bestfits_parameters <- read_delim("../../intermediate_data/Bin_10_polyequal_omegaalpha_bestfits_parameters", 
+                                                              delim = "\t", escape_double = FALSE, 
+                                                              trim_ws = TRUE)
+
+Bin_10_polyequal_omegaalpha_bestfits_parameters$Species<- factor(Bin_10_polyequal_omegaalpha_bestfits_parameters$Species,levels = c("Mouse","Fruit fly","Yeast"))
+Bin_10_polyequal_omegaalpha_bestfits_parameters$bin <- factor(Bin_10_polyequal_omegaalpha_bestfits_parameters$bin,levels = 1:15)
+
+ggplot(Bin_10_polyequal_omegaalpha_bestfits_parameters, aes(x = bin, y = omega_a)) + geom_point() + 
+  geom_boxplot(aes(group=bin), alpha=0.2) + facet_wrap(.~Species, scales="free_y") + 
+  theme_classic()+ylab(expression(omega[a]))+xlab("")+ geom_errorbar(aes(ymax=omega_a_hi, ymin=omega_a_lo))
+
+
+### 4C 
+
+Bin_15_polyequal_omegaalpha_bestfits_parameters <- read_delim("../../intermediate_data/Bin_15_polyequal_omegaalpha_bestfits_parameters", 
+                                                              delim = "\t", escape_double = FALSE, 
+                                                              trim_ws = TRUE)
+
+
+Bin_15_polyequal_omegaalpha_bestfits_parameters$Species<- factor(Bin_15_polyequal_omegaalpha_bestfits_parameters$Species,levels = c("Mouse","Fruit fly","Yeast"))
+Bin_15_polyequal_omegaalpha_bestfits_parameters$bin <- factor(Bin_15_polyequal_omegaalpha_bestfits_parameters$bin,levels = 1:15)
+
+ggplot(Bin_15_polyequal_omegaalpha_bestfits_parameters, aes(x = bin, y = omega_a)) + geom_point() + 
+  geom_boxplot(aes(group=bin), alpha=0.2) + facet_wrap(.~Species, scales="free_y") + 
+  theme_classic()+ylab(expression(omega[a]))+xlab("")+ geom_errorbar(aes(ymax=omega_a_hi, ymin=omega_a_lo))
 
 ################ ################ ################ ################ ################ 
-################ FIGURE 4 ################ ################ ################ ################ 
+################ FIGURE 5 ################ ################ ################ ################ 
 
 all_bingenes <- read_delim("../../intermediate_data/Propgenes_binned_all", 
                              delim = "\t", escape_double = FALSE, 
@@ -167,10 +196,10 @@ all_bingenes$Bin <- factor(all_bingenes$Bin,
                            levels = c("High constraint", "Moderate-high constraint", "Moderate-low constraint", "Low constraint"))
 
 
-### 4A 
+### 5A 
 
 
-pdf(file = "Fig4A.pdf",   width = 8, height = 4) 
+pdf(file = "Fig5A.pdf",   width = 8, height = 4) 
 
 ggplot(all_bingenes, aes(x = Bin, y = Percentage, fill=Species, colour = Species)) +
   geom_bar(stat = "identity", position = "dodge") +
@@ -182,7 +211,7 @@ ggplot(all_bingenes, aes(x = Bin, y = Percentage, fill=Species, colour = Species
 
 dev.off()
 
-## 4B
+## 5B
 all_bingenes$Bin2<-rep(c(rep("Highly deleterious",2), rep("Weakly deleterious",2)), 3)
 
 new_table <- all_bingenes %>%
@@ -193,7 +222,7 @@ new_table$Species<- factor(new_table$Species,levels = c("Mouse","Fruit fly","Yea
 
 
 
-pdf(file = "Fig4B.pdf",   width = 8, height = 4) 
+pdf(file = "Fig5B.pdf",   width = 8, height = 4) 
 
 ggplot(new_table, aes(x = Bin2, y = Total_Percentage, fill=Species, colour = Species)) +
   geom_bar(stat = "identity", position = "dodge") +
