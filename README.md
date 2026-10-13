@@ -1,6 +1,7 @@
 This repository contains the data and scripts necessary to replicate the final results presented in the paper:
 
 Yıldırım, B. & James, J. E. (2026). Gene-level complexity explains genome-wide variation in the distribution of fitness effects. Molecular Biology and Evolution, 43(9), 1-17
+
 The files in the repository are arranged as follows:
 
 GeneBayes_in/ and GeneBayes_out/
